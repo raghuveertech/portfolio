@@ -3,9 +3,28 @@
 .main {
   padding: 0 15px;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: $max-width;
 }
 
 .section {
   height: 100vh;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: $secondary-color;
+  border-radius: 0;
+  text-decoration: none;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-light;
+  transition: $transition;
+  border: 2px solid $secondary-color;
+  cursor: pointer;
+  letter-spacing: 1px;
+  &:hover {
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
 }

@@ -1,8 +1,32 @@
+// general
+$border-radius: 5px;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease-in-out;
+$max-width: 1200px;
+
 // fonts
-$primary-font: 'Raleway', sans-serif;
+$primary-font: 'Open Sans', sans-serif;
 $secondary-font: 'Lora', serif;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-sm: 14px;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$line-height-base: 1.5;
+$line-height-lg: 1.75;
+
 // colors
 $primary-color: #0a192f;
 $secondary-color: #67f5e5;
+$tertiary-color: #fff6a6;
 $white: #ffffff;
 $black: #000000;
+
+// breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

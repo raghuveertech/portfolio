@@ -1,23 +1,30 @@
 import MainHeader from '@components/MainHeader';
+import Introduction from '@components/Introduction';
 import '@scss/app.scss';
+import { useEffect, useState } from 'react';
 
 const App = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    let timeout;
+    const handleScroll = () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        setIsScrolled(window.scrollY > 200);
+      }, 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timeout);
+    };
+  }, []);
+
   return (
     <div className='main'>
-      <MainHeader />
-      <section className='section' id='introduction'>
-        <h2>Introduction</h2>
-      </section>
-      <section className='section' id='skillset'>
-        <h2>Skillset</h2>
-        <p>
-          I am a software engineer with a passion for building scalable web
-          applications. I have experience in React, Node.js, and Python.
-        </p>
-        <p>
-          I enjoy working on challenging problems and learning new technologies.
-        </p>
-      </section>
+      <MainHeader isScrolled={isScrolled} />
+      <Introduction />
       <section className='section' id='latestWork'>
         <h2>Latest Work</h2>
         <p>Here are some of my latest projects:</p>

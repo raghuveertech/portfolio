@@ -1,1 +1,77 @@
 @import './variables';
+
+.main-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 50px 0;
+  background-color: $primary-color;
+  z-index: 2;
+  transition: $transition;
+  &.scrolled {
+    padding: 15px 0;
+  }
+  .container {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: $max-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      color: $secondary-color;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-medium;
+      text-decoration: none;
+      transition: $transition;
+      cursor: pointer;
+      img {
+        max-width: 230px;
+      }
+    }
+    .main-nav {
+      ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 30px;
+        li {
+          a {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            letter-spacing: 0.3px;
+            font-size: 16px;
+            line-height: 30px;
+            transition: $transition;
+            color: $white;
+            font-weight: $font-weight-light;
+            letter-spacing: 1px;
+            &:before {
+              position: absolute;
+              bottom: -6px;
+              content: '';
+              display: block;
+              width: 0;
+              height: 2px;
+              background-color: $secondary-color;
+              transition: width 0.3s ease-in-out;
+              right: 0;
+              left: auto;
+            }
+            &:hover,
+            &.active {
+              color: $tertiary-color;
+              &:before {
+                width: 100%;
+                left: 0;
+                right: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
