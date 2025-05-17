@@ -1,6 +1,6 @@
 import '@scss/introduction.scss';
 import { Link } from 'react-scroll';
-import Skills from '@components/Skills';
+
 const Introduction = () => {
   return (
     <section className='section introduction' id='introduction'>
@@ -30,9 +30,6 @@ const Introduction = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className='skills-container'>
-        <Skills />
       </div>
     </section>
   );

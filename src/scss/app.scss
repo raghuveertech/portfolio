@@ -27,4 +27,8 @@
     background-color: $secondary-color;
     color: $primary-color;
   }
+  @media screen and (max-width: $breakpoint-lg) {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
 }

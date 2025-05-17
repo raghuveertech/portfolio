@@ -42,25 +42,27 @@ const Skills = () => {
   ];
 
   return (
-    <section id='skills' className='skills'>
-      <Marquee
-        velocity={20} // Speed in pixels per second
-        direction='rtl' // Right-to-left for natural scrolling
-        resetAfterTries={200} // Ensures smooth looping
-        onInit={() => console.log('Marquee initialized')}
-        onFinish={() => console.log('Marquee finished')}
-      >
-        {skills.map((skill, index) => (
-          <div
-            key={index}
-            className='skill-item'
-            aria-label={`Expertise in ${skill.name}`}
-          >
-            {skill.icon}
-            <span>{skill.name}</span>
-          </div>
-        ))}
-      </Marquee>
+    <section className='skills-container'>
+      <div id='skills' className='skills'>
+        <Marquee
+          velocity={20} // Speed in pixels per second
+          direction='rtl' // Right-to-left for natural scrolling
+          resetAfterTries={200} // Ensures smooth looping
+          onInit={() => console.log('Marquee initialized')}
+          onFinish={() => console.log('Marquee finished')}
+        >
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className='skill-item'
+              aria-label={`Expertise in ${skill.name}`}
+            >
+              {skill.icon}
+              <span>{skill.name}</span>
+            </div>
+          ))}
+        </Marquee>
+      </div>
     </section>
   );
 };

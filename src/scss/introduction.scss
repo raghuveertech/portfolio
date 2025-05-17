@@ -10,9 +10,22 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    position: relative;
+    @media screen and (max-width: $breakpoint-md) {
+      top: -30px;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      flex-direction: column-reverse;
+      top: -40px;
+    }
     .content {
       flex: 0 0 70%;
       max-width: 70%;
+      @media screen and (max-width: $breakpoint-sm) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+      }
       h1 {
         font-size: 65px;
         letter-spacing: 2px;
@@ -21,6 +34,17 @@
         font-family: $secondary-font;
         font-weight: $font-weight-normal;
         margin-bottom: 20px;
+        @media screen and (max-width: $breakpoint-lg) {
+          font-size: 40px;
+          margin-top: 20px;
+        }
+        @media screen and (max-width: $breakpoint-md) {
+          font-size: 30px;
+          margin-top: 10px;
+        }
+        @media screen and (max-width: $breakpoint-sm) {
+          text-align: center;
+        }
       }
       h2 {
         font-size: 18px;
@@ -31,17 +55,34 @@
         font-weight: $font-weight-light;
         margin-bottom: 30px;
         text-transform: uppercase;
+        @media screen and (max-width: $breakpoint-lg) {
+          font-size: 16px;
+          margin-top: 20px;
+          line-height: 2;
+          margin-bottom: 20px;
+        }
+        @media screen and (max-width: $breakpoint-sm) {
+          text-align: center;
+        }
       }
     }
     .image {
       flex: 0 0 30%;
       max-width: 30%;
       padding: 30px;
+      @media screen and (max-width: $breakpoint-sm) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
       .image-wrapper {
         position: relative;
         width: 200px;
         height: 200px;
         border-radius: 50%;
+        @media screen and (max-width: $breakpoint-lg) {
+          width: 150px;
+          height: 150px;
+        }
         &:before,
         &:after {
           content: '';
@@ -52,6 +93,9 @@
           border-radius: 50%;
           top: 0px;
           left: -25px;
+          @media screen and (max-width: $breakpoint-lg) {
+            left: -15px;
+          }
         }
         &:after {
           background-color: $secondary-color;
@@ -59,6 +103,10 @@
           height: 100%;
           top: 20px;
           left: 20px;
+          @media screen and (max-width: $breakpoint-lg) {
+            left: 10px;
+            top: 10px;
+          }
         }
         .main-image {
           position: relative;
@@ -79,14 +127,6 @@
           }
         }
       }
-    }
-  }
-  .skills-container {
-    position: absolute;
-    bottom: 0;
-    padding: 30px 0;
-    .skills-grid {
-      display: flex;
     }
   }
 }

@@ -1,7 +1,8 @@
 import MainHeader from '@components/MainHeader';
 import Introduction from '@components/Introduction';
-import '@scss/app.scss';
+import Skills from '@components/Skills';
 import { useEffect, useState } from 'react';
+import '@scss/app.scss';
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -11,7 +12,7 @@ const App = () => {
     const handleScroll = () => {
       clearTimeout(timeout);
       timeout = setTimeout(() => {
-        setIsScrolled(window.scrollY > 200);
+        setIsScrolled(window.scrollY > 100);
       }, 50);
     };
     window.addEventListener('scroll', handleScroll);
@@ -25,6 +26,7 @@ const App = () => {
     <div className='main'>
       <MainHeader isScrolled={isScrolled} />
       <Introduction />
+      <Skills />
       <section className='section' id='latestWork'>
         <h2>Latest Work</h2>
         <p>Here are some of my latest projects:</p>
