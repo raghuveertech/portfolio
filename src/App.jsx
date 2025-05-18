@@ -32,7 +32,6 @@ const App = () => {
     <div className='main'>
       <MainHeader isScrolled={isScrolled} />
       <Introduction />
-      <Skills />
       <Experience />
       {/* <section className='section' id='latestWork'>
         <h2>Latest Work</h2>

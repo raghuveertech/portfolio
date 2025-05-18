@@ -4,9 +4,23 @@
   .row {
     display: flex;
     width: 100%;
+    @media screen and (max-width: $breakpoint-xl) {
+      flex-direction: column;
+    }
     .header {
       flex: 0 0 30%;
       max-width: 30%;
+      @media screen and (max-width: $breakpoint-xl) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .section-header {
+        position: relative;
+        &:after {
+          left: 0;
+          transform: none;
+        }
+      }
     }
     .list-items {
       flex: 0 0 70%;
@@ -14,10 +28,18 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      @media screen and (max-width: $breakpoint-xl) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
       .list-item {
         flex: 0 0 50%;
         max-width: 50%;
         margin: 20px 0 30px;
+        @media screen and (max-width: $breakpoint-lg) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
         .position {
           font-size: 20px;
           font-weight: $font-weight-light;

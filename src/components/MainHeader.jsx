@@ -94,7 +94,13 @@ const MainHeader = ({ isScrolled }) => {
             </li>
           </ul>
         </nav>
-        <button className='button download-resume'>Download Resume</button>
+        <a
+          href='https://docs.google.com/document/d/11LewGhyz8oYZsuyucywji49uHzSIGW7ws4EUCM0kzdQ/edit?tab=t.0'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <button className='button resume'>Full Resume</button>
+        </a>
         <button className='mobile-menu' onClick={() => setMobileMenuOpen(true)}>
           <AiOutlineMenu />
         </button>

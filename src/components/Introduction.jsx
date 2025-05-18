@@ -1,5 +1,6 @@
 import '@scss/introduction.scss';
 import { Link } from 'react-scroll';
+import Skills from './Skills';
 
 const Introduction = () => {
   return (
@@ -19,8 +20,14 @@ const Introduction = () => {
           >
             Contact Me
           </Link>
-          <div className='mobile-download'>
-            <button className='button solid'>Download Resume</button>
+          <div className='mobile-resume'>
+            <a
+              href='https://docs.google.com/document/d/11LewGhyz8oYZsuyucywji49uHzSIGW7ws4EUCM0kzdQ/edit?tab=t.0'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <button className='button solid'>Full Resume</button>
+            </a>
           </div>
         </div>
         <div className='image'>
@@ -34,6 +41,7 @@ const Introduction = () => {
           </div>
         </div>
       </div>
+      <Skills />
     </section>
   );
 };

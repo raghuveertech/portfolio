@@ -12,7 +12,7 @@ const Experience = () => {
             <h3 className='company'>Edifecs Technologies Private Limited</h3>
             <h3 className='position'>Lead Software Engineer</h3>
             <p className='duration'>March 2024 - Present</p>
-            <p className='technologies'>ReactJS, SCSS, SQL</p>
+            <p className='technologies'>ReactJS, TypeScript, SCSS, SQL</p>
           </div>
           <div className='list-item'>
             <h3 className='company'>Cendyn India Private Limited</h3>
@@ -24,7 +24,7 @@ const Experience = () => {
             <h3 className='company'>OSI Digital</h3>
             <h3 className='position'>Senior Software Engineer</h3>
             <p className='duration'>March 2022 - September 2022</p>
-            <p className='technologies'>ReactJS, Redux, Figma</p>
+            <p className='technologies'>ReactJS, TypeScript, Redux, Figma</p>
           </div>
           <div className='list-item'>
             <h3 className='company'>
