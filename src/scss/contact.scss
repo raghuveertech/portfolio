@@ -1,0 +1,50 @@
+@import '@scss/variables';
+
+.contact {
+  text-align: center;
+  .email,
+  .phone {
+    margin-bottom: 20px;
+    @media screen and (max-width: $breakpoint-lg) {
+      margin-bottom: 10px;
+    }
+    a {
+      font-size: 35px;
+      font-weight: $font-weight-light;
+      color: $white;
+      text-decoration: none;
+      transition: $transition;
+      &:hover {
+        color: $secondary-color;
+      }
+      @media screen and (max-width: $breakpoint-lg) {
+        font-size: 25px;
+      }
+    }
+  }
+  .soical {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    a {
+      font-size: 25px;
+      color: $secondary-color;
+      text-decoration: none;
+      transition: $transition;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  .thank-you {
+    margin: 200px 0;
+    font-size: 100px;
+    color: $tertiary-color;
+    text-transform: capitalize;
+    font-weight: $font-weight-light;
+    @media screen and (max-width: $breakpoint-md) {
+      margin: 100px 0;
+      font-size: 50px;
+    }
+  }
+}

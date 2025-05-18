@@ -1,11 +1,15 @@
+import { useEffect, useState } from 'react';
+import { CgArrowUp } from 'react-icons/cg';
+import { Link } from 'react-scroll';
 import MainHeader from '@components/MainHeader';
 import Introduction from '@components/Introduction';
 import Skills from '@components/Skills';
-import { useEffect, useState } from 'react';
+import Contact from '@components/Contact';
 import '@scss/app.scss';
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
     let timeout;
@@ -13,6 +17,7 @@ const App = () => {
       clearTimeout(timeout);
       timeout = setTimeout(() => {
         setIsScrolled(window.scrollY > 100);
+        setShowBackToTop(window.scrollY > 500);
       }, 50);
     };
     window.addEventListener('scroll', handleScroll);
@@ -27,7 +32,7 @@ const App = () => {
       <MainHeader isScrolled={isScrolled} />
       <Introduction />
       <Skills />
-      <section className='section' id='latestWork'>
+      {/* <section className='section' id='latestWork'>
         <h2>Latest Work</h2>
         <p>Here are some of my latest projects:</p>
         <ul>
@@ -53,14 +58,21 @@ const App = () => {
           <li>"I enjoyed working with Raghuveer on this project."</li>
           <li>"Raghuveer is very knowledgeable and helpful."</li>
         </ul>
-      </section>
-      <section className='section' id='contact'>
-        <h2>Contact</h2>
-        <p>If you would like to get in touch, please reach out to me at:</p>
-        <ul>
-          <li>Email:</li>
-        </ul>
-      </section>
+      </section> */}
+      <Contact />
+      {showBackToTop && (
+        <Link
+          to='introduction'
+          smooth={true}
+          duration={500}
+          offset={-80}
+          spy={true}
+          activeClass='active'
+          className='scroll-to-top'
+        >
+          <CgArrowUp />
+        </Link>
+      )}
     </div>
   );
 };

@@ -10,16 +10,9 @@
   .skills {
     padding: 20px 0;
     text-align: center;
-    .marquee {
-      overflow: hidden; // Hide overflow for clean edges
-      width: 100%;
-      display: flex;
-      align-items: center;
-
-      &:hover .skill-item {
-        animation-play-state: paused; // Pause marquee on hover
-      }
-    }
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
 
     .skill-item {
       display: inline-flex;
@@ -99,7 +92,7 @@
     }
 
     // Responsive adjustments
-    @media (max-width: 767px) {
+    @media (max-width: $breakpoint-md) {
       .skill-item {
         margin: 0 1rem;
         svg {

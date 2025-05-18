@@ -11,7 +11,7 @@ const Introduction = () => {
             Fullstack JavaScript Developer | UI/UX Designer
           </h2>
           <Link
-            className='button primary'
+            className='button'
             to='contact'
             smooth={true}
             duration={500}
@@ -19,6 +19,9 @@ const Introduction = () => {
           >
             Contact Me
           </Link>
+          <div className='mobile-download'>
+            <button className='button solid'>Download Resume</button>
+          </div>
         </div>
         <div className='image'>
           <div className='image-wrapper'>
