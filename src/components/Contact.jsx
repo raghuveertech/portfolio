@@ -1,5 +1,5 @@
 import '@scss/contact.scss';
-import { BsLinkedin, BsYoutube } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsYoutube } from 'react-icons/bs';
 import { LuHeartHandshake } from 'react-icons/lu';
 
 const Contact = () => {
@@ -28,6 +28,14 @@ const Contact = () => {
           aria-label='YouTube Channel'
         >
           <BsYoutube />
+        </a>
+        <a
+          href='https://github.com/raghuveertech'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='GitHub Profile'
+        >
+          <BsGithub />
         </a>
       </div>
       <div className='thank-you'>
