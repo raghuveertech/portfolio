@@ -1,4 +1,5 @@
 import '@scss/latest-work.scss';
+
 const LatestWork = () => {
   return (
     <section className='section latest-work' id='latestWork'>

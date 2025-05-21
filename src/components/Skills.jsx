@@ -1,4 +1,4 @@
-import '@scss/Skills.scss';
+import '@scss/skills.scss';
 import {
   SiHtml5,
   SiCss3,

@@ -1,6 +1,6 @@
-import '@scss/introduction.scss';
 import { Link } from 'react-scroll';
-import Skills from './Skills';
+import Skills from '@components/Skills';
+import '@scss/introduction.scss';
 
 const Introduction = () => {
   return (

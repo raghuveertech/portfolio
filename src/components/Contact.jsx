@@ -1,6 +1,6 @@
-import '@scss/contact.scss';
 import { BsGithub, BsLinkedin, BsYoutube } from 'react-icons/bs';
 import { LuHeartHandshake } from 'react-icons/lu';
+import '@scss/contact.scss';
 
 const Contact = () => {
   return (

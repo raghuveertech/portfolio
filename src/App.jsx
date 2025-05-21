@@ -5,9 +5,9 @@ import MainHeader from '@components/MainHeader';
 import Introduction from '@components/Introduction';
 import LatestWork from './components/LatestWork';
 import Experience from '@components/Experience';
+import Testimonials from './components/Testimonials';
 import Contact from '@components/Contact';
 import '@scss/app.scss';
-import Testimonials from './components/Testimonials';
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);

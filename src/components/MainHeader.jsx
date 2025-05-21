@@ -1,8 +1,8 @@
+import { useState } from 'react';
 import { Link } from 'react-scroll';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 import '@scss/main-header.scss';
-import { useState } from 'react';
 
 const MainHeader = ({ isScrolled }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
