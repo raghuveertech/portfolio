@@ -1,0 +1,27 @@
+@import 'variables';
+
+.testimonials {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .testimonial-item {
+      .testimonial-text {
+        font-size: 20px;
+        color: $white;
+        line-height: 1.5;
+        font-weight: $font-weight-light;
+        margin-bottom: 20px;
+        font-style: italic;
+        letter-spacing: 0.5px;
+      }
+      .testimonial-author {
+        font-size: 16px;
+        color: $tertiary-color;
+        font-weight: $font-weight-bold;
+        margin-bottom: 10px;
+        text-align: right;
+      }
+    }
+  }
+}

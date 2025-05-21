@@ -2,6 +2,12 @@
 
 .contact {
   text-align: center;
+  .section-header {
+    &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
   .email,
   .phone {
     margin-bottom: 20px;

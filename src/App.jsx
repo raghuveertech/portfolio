@@ -3,10 +3,11 @@ import { CgArrowUp } from 'react-icons/cg';
 import { Link } from 'react-scroll';
 import MainHeader from '@components/MainHeader';
 import Introduction from '@components/Introduction';
+import LatestWork from './components/LatestWork';
 import Experience from '@components/Experience';
-import Skills from '@components/Skills';
 import Contact from '@components/Contact';
 import '@scss/app.scss';
+import Testimonials from './components/Testimonials';
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,25 +33,9 @@ const App = () => {
     <div className='main'>
       <MainHeader isScrolled={isScrolled} />
       <Introduction />
+      <LatestWork />
       <Experience />
-      {/* <section className='section' id='latestWork'>
-        <h2>Latest Work</h2>
-        <p>Here are some of my latest projects:</p>
-        <ul>
-          <li>Project 1: A web application built with React and Node.js</li>
-          <li>Project 2: A Python script for data analysis</li>
-          <li>Project 3: A mobile app built with React Native</li>
-        </ul>
-      </section>
-      <section className='section' id='testimonials'>
-        <h2>Testimonials</h2>
-        <p>Here are some testimonials from my colleagues and clients:</p>
-        <ul>
-          <li>"Raghuveer is a great developer!"</li>
-          <li>"I enjoyed working with Raghuveer on this project."</li>
-          <li>"Raghuveer is very knowledgeable and helpful."</li>
-        </ul>
-      </section> */}
+      <Testimonials />
       <Contact />
       {showBackToTop && (
         <Link
