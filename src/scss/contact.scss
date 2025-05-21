@@ -1,4 +1,4 @@
-@import '@scss/variables';
+@use './variables' as *;
 
 .contact {
   text-align: center;

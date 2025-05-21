@@ -1,4 +1,4 @@
-@import '@scss/variables';
+@use './variables' as *;
 
 .introduction {
   display: flex;
