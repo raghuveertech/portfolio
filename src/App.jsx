@@ -8,6 +8,7 @@ import Experience from '@components/Experience';
 import Testimonials from './components/Testimonials';
 import Contact from '@components/Contact';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import '@scss/app.scss';
 
 const App = () => {
@@ -38,6 +39,7 @@ const App = () => {
       <Experience />
       <Testimonials />
       <Contact />
+      <SpeedInsights />
       <Analytics />
       {showBackToTop && (
         <Link
